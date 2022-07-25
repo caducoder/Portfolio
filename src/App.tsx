@@ -1,9 +1,11 @@
+import NavBar from "./components/NavBar"
+import './App.scss'
 
 function App() {
 
   return (
     <div className="App">
-      <h1>Caducoder</h1>
+      <NavBar />
     </div>
   )
 }
