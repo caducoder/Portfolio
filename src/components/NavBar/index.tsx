@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import './NavBar.scss'
 
 function NavBar() {
   const [activeLink, setActiveLink] = useState('home');
