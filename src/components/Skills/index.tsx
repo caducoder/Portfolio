@@ -43,8 +43,15 @@ function Skills() {
           <Col>
             <div className="skill-bx">
               <h2>Habilidades</h2>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-              <Carousel responsive={responsive} infinite={true} className='skill-slider'>
+              <p>Ferramentas e tecnologias utilizadas no dia a dia</p>
+              <Carousel
+                responsive={responsive}
+                infinite={true}
+                className='skill-slider'
+                removeArrowOnDeviceType={["tablet", "mobile"]}
+                autoPlay
+                autoPlaySpeed={5000}
+              >
                 <div className="item">
                   <img src={HTML} alt="Skill Image" />
                   <h5>HTML</h5>
