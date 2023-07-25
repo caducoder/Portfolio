@@ -1,0 +1,62 @@
+[
+  {
+    "title": "HTML",
+    "src": "/svgs/html.svg",
+    "alt": "Imagem logo HTML"
+  },
+  {
+    "title": "CSS",
+    "src": "/svgs/css.svg",
+    "alt": "Imagem logo CSS"
+  },
+  {
+    "title": "JAVASCRIPT",
+    "src": "/svgs/js.svg",
+    "alt": "Imagem logo JavaScript"
+  },
+  {
+    "title": "TYPESCRIPT",
+    "src": "/svgs/typescript.svg",
+    "alt": "Imagem logo Typescript"
+  },
+  {
+    "title": "REACTJS",
+    "src": "/svgs/react.svg",
+    "alt": "Imagem logo ReactJS"
+  },
+  {
+    "title": "JAVA",
+    "src": "/svgs/java.svg",
+    "alt": "Imagem logo Java"
+  },
+  {
+    "title": "GIT",
+    "src": "/svgs/git.svg",
+    "alt": "Imagem logo Git"
+  },
+  {
+    "title": "DOCKER",
+    "src": "/svgs/docker.svg",
+    "alt": "Imagem logo Docker"
+  },
+  {
+    "title": "SASS",
+    "src": "/svgs/sass.svg",
+    "alt": "Imagem logo Sass"
+  },
+  {
+    "title": "LINUX",
+    "src": "/svgs/linux.svg",
+    "alt": "Imagem logo Linux"
+  },
+  {
+    "title": "FIREBASE",
+    "src": "/svgs/firebase.svg",
+    "alt": "Imagem logo Firebase"
+  },
+  {
+    "title": "POSTGRES",
+    "src": "/svgs/postgres.svg",
+    "alt": "Imagem logo Postgres"
+  }
+]
