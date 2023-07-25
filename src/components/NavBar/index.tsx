@@ -7,6 +7,8 @@ import './NavBar.scss'
 function NavBar() {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const [togglerIsExpanded, setTogglerIsExpanded] = useState(false);
+  const toggleMenu = () => setTogglerIsExpanded(prev => !prev)
 
   const onUpdateActiveLink = (section: string) => {
     setActiveLink(section)
@@ -28,21 +30,38 @@ function NavBar() {
 
   return (
     <Navbar expand="lg" className={scrolled ? 'scrolled' : ''}>
-      <Container>
+      <Container className='nav-container'>
         <Navbar.Brand href="#home">CADUCODER</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" >
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          aria-expanded={togglerIsExpanded}
+          onClick={toggleMenu}
+
+        >
           <span className='navbar-toggler-icon'></span>
         </Navbar.Toggle>
 
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav" >
           <Nav className="me-auto">
-            <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>
+            <Nav.Link
+              href="#home"
+              className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('home')}
+            >
               Início
             </Nav.Link>
-            <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>
+            <Nav.Link
+              href="#skills"
+              className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('skills')}
+            >
               Habilidades
             </Nav.Link>
-            <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>
+            <Nav.Link
+              href="#projects"
+              className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
+              onClick={() => onUpdateActiveLink('projects')}
+            >
               Projetos
             </Nav.Link>
           </Nav>

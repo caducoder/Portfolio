@@ -41,8 +41,8 @@ function Skills() {
                 autoPlay
                 autoPlaySpeed={5000}
               >
-                {skills.map(skill => (
-                  <div className='item'>
+                {skills.map((skill, i) => (
+                  <div key={i} className='item'>
                     <img src={skill.src} alt={skill.alt} />
                     <h5>{skill.title}</h5>
                   </div>

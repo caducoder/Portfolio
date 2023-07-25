@@ -79,3 +79,9 @@
 .txt-rotate>.wrap {
   border-right: 0.08em solid #666;
 }
+
+@media only screen and (max-width: 576px) {
+  .banner h1 {
+    font-size: 32px;
+  }
+}

@@ -50,13 +50,13 @@ function Banner() {
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7} lg={6}>
             <span className="tagline">Bem-vindo ao meu Portfólio</span>
-            <h1>{`Olá, Eu sou o Carlos`} <br /><span className='wrap'>{text}</span></h1>
+            <h1>{`Olá, Eu sou o Carlos`} <br /><span className='wrap'>{text}&nbsp;</span></h1>
             <p>
               Entusiasta do desenvolvimento Front-end com foco especializado em React.js e Javascript/Typescript.
               Minha jornada no mundo da programação começou com a fascinação pela criação de interfaces dinâmicas e interativas,
               o que me impulsionou a buscar e aprimorar minhas habilidades nesta área.
             </p>
-            <button onClick={() => console.log('connect')}>
+            <button onClick={() => console.log('connect')} className='btn btn-dark'>
               Let's connect <FontAwesomeIcon icon={faArrowCircleRight} />
             </button>
           </Col>
