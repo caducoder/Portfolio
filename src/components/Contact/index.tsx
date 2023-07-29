@@ -22,7 +22,11 @@ function Contact() {
       <Container className="xl">
         <Row className='align-items-center'>
           <Col md={6} >
-            <img src="https://fakeimg.pl/350x200/?text=Hello" alt="Entre em contato" />
+            <img
+              className='invert'
+              src="svgs/person-illustration.svg"
+              alt="Entre em contato"
+            />
           </Col>
           <Col md={6} className='form-column'>
             <h2>Contato</h2>

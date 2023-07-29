@@ -14,6 +14,15 @@ function NavBar() {
     setActiveLink(section)
   }
 
+  const scrollToContact = () => {
+    const secaoDestino = document.getElementById("connect");
+    if (secaoDestino) {
+      const elementPosition = secaoDestino.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     const onScroll = () => {
       if (window.scrollY > 50) {
@@ -76,7 +85,7 @@ function NavBar() {
                 <FontAwesomeIcon icon={faTwitter} inverse className='icon' />
               </a>
             </div>
-            <button className="vvd"><span>Let's Connect</span></button>
+            <button onClick={scrollToContact}><span>Let's Connect</span></button>
           </span>
         </Navbar.Collapse>
       </Container>

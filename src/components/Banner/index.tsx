@@ -44,6 +44,15 @@ function Banner() {
     }
   }
 
+  const scrollToContact = () => {
+    const secaoDestino = document.getElementById("connect");
+    if (secaoDestino) {
+      const elementPosition = secaoDestino.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="banner" id="home">
       <Container className='xl'>
@@ -56,7 +65,7 @@ function Banner() {
               Minha jornada no mundo da programação começou com a fascinação pela criação de interfaces dinâmicas e interativas,
               o que me impulsionou a buscar e aprimorar minhas habilidades nesta área.
             </p>
-            <button onClick={() => console.log('connect')} className='btn btn-dark'>
+            <button onClick={scrollToContact} className='btn btn-dark'>
               Let's connect <FontAwesomeIcon icon={faArrowCircleRight} />
             </button>
           </Col>

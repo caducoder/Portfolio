@@ -2,6 +2,13 @@
   padding: 80px 0;
   background-image: linear-gradient(65.5deg, rgba(23, 205, 205, 1) -15.1%, rgba(23, 25, 95, 1) 71.5%);
 
+  .invert {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
   h2 {
     font-size: 40px;
     font-weight: 700;
@@ -11,7 +18,6 @@
 
   .form-column {
     overflow: auto;
-
   }
 
   .form {
