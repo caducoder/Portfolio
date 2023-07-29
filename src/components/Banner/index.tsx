@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 import { Col, Container, Row } from 'react-bootstrap'
-import Avatar from '../../assets/img/readyplayer-caducoder.png'
+import Spline from '@splinetool/react-spline';
 import './Banner.scss'
 
 function Banner() {
@@ -61,7 +61,8 @@ function Banner() {
             </button>
           </Col>
           <Col xs={12} md={6} xl={5} lg={6}>
-            <img src={Avatar} alt="Avatar" />
+            {/* <img src={Avatar} alt="Avatar" /> */}
+            <Spline className='spline' scene="https://prod.spline.design/4ZtXiZQGWE3bEwqB/scene.splinecode" />
           </Col>
         </Row>
       </Container>

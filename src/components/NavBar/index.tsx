@@ -36,7 +36,6 @@ function NavBar() {
           aria-controls="basic-navbar-nav"
           aria-expanded={togglerIsExpanded}
           onClick={toggleMenu}
-
         >
           <span className='navbar-toggler-icon'></span>
         </Navbar.Toggle>
@@ -73,7 +72,7 @@ function NavBar() {
               <a href="https://www.linkedin.com/in/carloseduardodev/" target='_blank'>
                 <FontAwesomeIcon icon={faLinkedin} inverse className='icon' />
               </a>
-              <a href="#">
+              <a href="https://twitter.com/Carlosxti" target='_blank'>
                 <FontAwesomeIcon icon={faTwitter} inverse className='icon' />
               </a>
             </div>
