@@ -6,7 +6,6 @@ import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 
 function App() {
-  // remover arquivo App.scss, caso não coloque nenhum estilo
   return (
     <div className="App">
       <NavBar />

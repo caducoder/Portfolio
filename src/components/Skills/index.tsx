@@ -43,7 +43,7 @@ function Skills() {
               >
                 {skills.map((skill, i) => (
                   <div key={i} className='item'>
-                    <img src={skill.src} alt={skill.alt} />
+                    <img src={skill.src} alt={skill.alt} loading='lazy' />
                     <h5>{skill.title}</h5>
                   </div>
                 ))}

@@ -18,4 +18,19 @@
     text-align: center;
     width: 70%;
   }
+
+  .card-img {
+
+    max-height: 200px;
+
+  }
+
+  .project-stack {
+    flex-direction: row;
+    align-items: center;
+
+    @media(max-width: 768px) {
+      flex-direction: column;
+    }
+  }
 }

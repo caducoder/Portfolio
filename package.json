@@ -17,6 +17,7 @@
     "@splinetool/runtime": "^0.9.402",
     "@types/bootstrap": "^5.2.0",
     "bootstrap": "^5.2.0",
+    "github-automated-repos": "^1.0.25",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
