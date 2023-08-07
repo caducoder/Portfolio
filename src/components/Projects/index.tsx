@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Tab, Tabs, Card, ListGroup, Stack } from "react-bootstrap";
-import { useGithubAutomatedRepos, ProjectIcon, StackIcon, IGithubRepos } from 'github-automated-repos';
+import { Container, Row, Col, Card, Stack } from "react-bootstrap";
+import { useGithubAutomatedRepos, StackIcon, IGithubRepos } from 'github-automated-repos/index';
 import "./Projects.scss"
 
 const IMAGE_URL = "https://raw.githubusercontent.com/caducoder"
-// /adopet-challenge/main/public/adopet-preview.png
 
 function Projects() {
   const { dataReposGithub } = useGithubAutomatedRepos()
@@ -16,11 +15,6 @@ function Projects() {
       .then(data => setRepository(dataReposGithub(data, 'deployed')));
   }, [])
 
-  const getPreviewImage = (repoName: string) => {
-    const image = fetch(`${IMAGE_URL}/${repoName}/main/public/${repoName.toLowerCase()}-preview.png`)
-    //https://fakeimg.pl/250x180/?text=Projeto
-  }
-  console.log(repository)
   return (
     <section className="project" id="projects">
       <Container className="xl">
@@ -33,11 +27,15 @@ function Projects() {
               para construção de interfaces modernas.
             </p>
             <Container>
-              <Stack className="project-stack" gap={2}>
+              <Stack className="project-stack" gap={4}>
                 {repository.map((item) => {
                   return (
-                    <Card key={item.id} style={{ margin: '0 10px', padding: 0 }} bg="dark" >
-                      <Card.Img variant="top" src={`${IMAGE_URL}/${item.name}/main/public/${item.name.toLowerCase()}-preview.png`} className="card-img" />
+                    <Card key={item.id} style={{ padding: 0 }} bg="dark" >
+                      <Card.Img
+                        variant="top"
+                        src={`${IMAGE_URL}/${item.name}/main/public/${item.name.toLowerCase()}-preview.png`}
+                        className="card-img"
+                      />
                       <Card.Body>
 
                         <Card.Text>
