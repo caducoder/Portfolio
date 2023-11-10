@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Stack } from "react-bootstrap";
+import { Container, Row, Col, Card, Stack, Button } from "react-bootstrap";
 import { useGithubAutomatedRepos, StackIcon, IGithubRepos } from 'github-automated-repos/index';
 import "./Projects.scss"
 
@@ -10,7 +10,7 @@ function Projects() {
   const [repository, setRepository] = useState<IGithubRepos[]>([])
 
   useEffect(() => {
-    fetch('https://api.github.com/users/caducoder/repos')
+    fetch('https://api.github.com/users/caducoder/repos?sort=created&per_page=999')
       .then(response => response.json())
       .then(data => setRepository(dataReposGithub(data, 'deployed')));
   }, [])
@@ -27,38 +27,50 @@ function Projects() {
               para construção de interfaces modernas.
             </p>
             <Container>
-              <Stack className="project-stack" gap={4}>
+              <Row xs={1} md={2} lg={3} className="g-4">
                 {repository.map((item) => {
                   return (
-                    <Card key={item.id} style={{ padding: 0 }} bg="dark" >
-                      <Card.Img
-                        variant="top"
-                        src={`${IMAGE_URL}/${item.name}/main/public/${item.name.toLowerCase()}-preview.png`}
-                        className="card-img"
-                      />
-                      <Card.Body>
+                    <Col key={item.id}>
+                      <Card  style={{ padding: 0, height: 525 }} bg="dark" >
+                        <Card.Img
+                          variant="top"
+                          src={`${IMAGE_URL}/${item.name}/main/public/${item.name.toLowerCase()}-preview.png`}
+                          className="card-img"
+                        />
+                        <Card.Body className="d-flex flex-column justify-content-between">
 
-                        <Card.Text>
-                          {item.description}
-                        </Card.Text>
+                          <Card.Text>
+                            {item.description}
+                          </Card.Text>
+                          <div>
+                          <Card.Link href={item.homepage} target="_blank">
+                            <Button>
+                              Website
+                            </Button>
+                          </Card.Link>
+                          <Card.Link href={item.html_url} target="_blank">
+                            <Button>
+                              Repositório
+                            </Button>
+                          </Card.Link>
+                          </div>
 
-                        <Card.Link href={item.homepage} target="_blank">Website</Card.Link>
-                        <Card.Link href={item.html_url} target="_blank">Repositório</Card.Link>
+                        </Card.Body>
+                        <Card.Footer >
 
-                      </Card.Body>
-                      <Card.Footer>
+                          {item.topics.map((icon) => {
+                            
+                            return icon !== 'deployed' ? (
+                              <StackIcon key={icon} className="stack_Icon pe-2" iconItem={icon} />
+                            ) : null
+                          })}
 
-                        {item.topics.map((icon) => {
-                          return (
-                            <StackIcon key={icon} className="stack_Icon" iconItem={icon} />
-                          )
-                        })}
-
-                      </Card.Footer>
-                    </Card>
+                        </Card.Footer>
+                      </Card>
+                    </Col>
                   )
                 })}
-              </Stack>
+              </Row>
 
             </Container>
           </Col>
